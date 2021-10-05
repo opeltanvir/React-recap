@@ -3,16 +3,19 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const nayoks = ['jasin','deepjol','bappaRaz']
+  const nayoks = ['jasin','deepjol','bappaRaz','Omar Sani','Alamgir'];
   return (
     <div className="App">
       <MovieCounter></MovieCounter>
+      |{
+        nayoks.map(nayok => <li>{nayok}</li>)
+      }
       <Nayok name ={nayoks[1]}></Nayok>
        <Nayok name ="Sakib Khan"></Nayok>
         <Nayok name ={nayoks.[0]}></Nayok>
          <Nayok></Nayok>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo"/>
       </header>
     </div>
   );
